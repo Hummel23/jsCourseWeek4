@@ -1,0 +1,27 @@
+extends menu
+
+block primary
+    h1 This are all the appartments registered in the from the selected landlord:
+    if appartmentsInArea.length
+        table
+            thead
+                td ID
+                td Address
+                td Area
+                td Number of Rooms
+                td Size in sqm
+                td Rent
+            each appartment in appartmentsInArea
+                tr
+                    td #{appartment.id}
+                    td #{appartment.street}, #{appartment.postalCode} #{appartment.city}
+                    td #{appartment.area}
+                    td #{appartment.numRooms}
+                    td #{appartment.sqm}
+                    td #{appartment.rent}
+
+        pre= JSON.stringify(appartmentsInArea, null, 2)
+    else
+        p There's no one yet :(
+    script.
+        console.log(!{JSON.stringify(appartmentsInArea)})

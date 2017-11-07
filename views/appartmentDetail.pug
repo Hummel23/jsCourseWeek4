@@ -1,0 +1,11 @@
+extends menu
+
+block primary
+    if appartment
+        h1 This is the appartment in #{appartment.area} for #{appartment.rent} EUR!
+        p Here are the full details:
+        pre= JSON.stringify(appartment, null, 2)
+    else
+        h1 Sorry, but this appartment has probably been removed from this site!
+    script.
+        console.log(!{JSON.stringify(appartment)})

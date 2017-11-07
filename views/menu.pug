@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+  .w3-sidebar
+  .w3-bar-block
+    block sidebar
+      #sidebar
+        a(href="http://localhost:3000/person/all/landlords") Find all Landlords
+        br
+        a(href="http://localhost:3000/person/all") Find all registered persons here
+        br
+        a(href="http://localhost:3000/appartment/all") Find all appartments here
+        br 
+        a(href="http://localhost:3000/appartment/all/forRent") Find all available appartments here
+        br 
+  .primary
+    block primary
+      #body

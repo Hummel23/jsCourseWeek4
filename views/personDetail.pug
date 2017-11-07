@@ -1,0 +1,11 @@
+extends menu
+
+block primary
+    if person
+        h1 This is #{person.firstname}&nbsp#{person.lastname}!
+        p Here are the full details:
+        pre= JSON.stringify(person, null, 2)
+    else
+        h1 There's no such person!
+    script.
+        console.log(!{JSON.stringify(person)})
