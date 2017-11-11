@@ -18,8 +18,8 @@ router.get('/:id', async (req, res, next) => {
 })
 
 router.get('/:lastname', async (req, res, next) => {
-    const person = await PersonService.findLandlordsByLastname(req.params.lastname)
-    res.render('landlordListByLastname', {person})
+    const people = await PersonService.findLandlordsByLastname(req.params.lastname)
+    res.render('personList', {people})
 })
 
 router.post('/', async (req, res, next) => {
