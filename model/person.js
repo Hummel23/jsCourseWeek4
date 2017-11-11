@@ -1,15 +1,26 @@
-module.exports = class Person{
-    constructor(id, firstname, lastname, age, isLandlord, appartmentIds){
-        this.id = id
-        this.firstname = firstname
-        this.lastname = lastname
-        this.age = age
-        this.isLandlord = isLandlord || false
-        this.appartmentIds = appartmentIds || [];
-    }
+const mongoose = require('mongoose')
+const AutoIncrement = require('mongoose-sequence')(mongoose)
 
-    static create(person){
-        return new Person(person.id, person.firstname, person.lastname,
-        person.age, person.isLandlord, person.appartmentIds);
-    }
-}
+
+const PersonSchema = mongoose.Schema({
+    fristname: {
+        type:String,
+        required:true,
+    }, 
+    lastname: {
+        type:String,
+        required:true,
+    }, 
+    age: {
+        type:Number,
+        default: 0
+    },
+    appartments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Appartments',
+    }]
+})
+
+PersonSchema.plugin(AutoIncrement, {inc_field: 'id'})
+
+module.exports = mongoose.model('Person', PersonSchema)
