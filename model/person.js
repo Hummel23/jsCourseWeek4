@@ -3,7 +3,7 @@ const AutoIncrement = require('mongoose-sequence')(mongoose)
 
 
 const PersonSchema = mongoose.Schema({
-    fristname: {
+    firstname: {
         type:String,
         required:true,
     }, 
