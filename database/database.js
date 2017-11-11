@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise
 
 // mongoose.set('debug', true)
 
-mongoose.connect('mongodb://localhost/wtmbjs', {
+mongoose.connect('mongodb://localhost/webApp', {
     useMongoClient:true
 })
 
