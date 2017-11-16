@@ -1,0 +1,13 @@
+extends menu
+
+block primary
+    h1 Create a new Appartment here
+    form(method='POST' action ='/appartment/add/' + id)
+        div.form-group
+        label(for='street') Street:
+        input.form-control(type='text', name='street')
+        label(for='city') City:
+        input.form-control(type='text', name='City')
+        label(for='postalCode') PostalCode:
+        input.form-control(type='text', name='postalCode')
+        button.btn.btn-primary(type='submit') Submit

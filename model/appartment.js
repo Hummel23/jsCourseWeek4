@@ -1,14 +1,13 @@
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
-const Address = require('./address')
 const Person = require('./person')
 
 
 const AppartmentSchema = mongoose.Schema({
     address:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:'Address',
-        required:true
+        street: String,
+        postalCode: Number,
+        city: String
     },
     numRooms: {
         type:Number,
@@ -16,7 +15,6 @@ const AppartmentSchema = mongoose.Schema({
     },
    rent: {
        type: Number,
-       required: true
    },
    sqm: {
        type: Number,
@@ -24,8 +22,7 @@ const AppartmentSchema = mongoose.Schema({
    },
    landlord:{
        type: mongoose.Schema.Types.ObjectId,
-       ref:'Person',
-       required:true
+       ref: 'Person',
    },
    isRented:{
        type: Boolean,

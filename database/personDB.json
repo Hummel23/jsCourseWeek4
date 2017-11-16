@@ -1,3 +1,0 @@
-[{"id":1, "lastname": "Miller", "firstname": "Mary", "age": 35, "isLandlord":true, "appartmentIds": [1, 2, 7]}, {"id":2, "lastname": "Pan", "firstname": "Peter", "age": 56, "isLandlord":false},
-    {"id":3, "lastname": "Hook", "firstname": "Captain", "age": 42, "isLandlord":true, "appartmentIds": [3, 4, 5, 8]}, {"id":4, "lastname": "Jackson", "firstname": "Michael", "age": 80, "isLandlord":true, "appartmentIds": [6]},
-    {"id":5, "lastname": "Spears", "firstname": "Britney", "age": 39, "isLandlord":false},{"id":6, "lastname": "Mouse", "firstname": "Mickey", "age": 75, "isLandlord":true}]

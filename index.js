@@ -6,16 +6,15 @@ require('./database/database')
 const app = express()
 
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded())
 app.use(cookieParser())
 app.set('view engine', 'pug')
 
 const person = require('./controller/personController')
 const appartment = require('./controller/appartmentController')
 
-
 app.use('/person', person)
 app.use('/appartment', appartment)
-
 
 app.get('/',async (req, res, next) => {
     res.render('index')

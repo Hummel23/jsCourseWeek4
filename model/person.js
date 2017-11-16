@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
+const Appartment = require('./appartment')
 
 
 const PersonSchema = mongoose.Schema({
@@ -17,7 +18,7 @@ const PersonSchema = mongoose.Schema({
     },
     appartments: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref:'Appartments',
+        ref:'Appartment',
     }]
 })
 

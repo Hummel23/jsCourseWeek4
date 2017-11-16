@@ -5,11 +5,11 @@ async function findAll() {
 }
 
 async function findLandlordsByLastname(lastname) {
-    return Person.findOne({lastname}).populate('Appartments').populate('Address');
+    return Person.findOne({lastname}).populate('appartments');
 }
 
 async function find(id) {
-    return Person.find({id}).populate('Appartments').populate('Address');
+    return Person.findOne({id}).populate('appartments');
 }
 
 async function add(person) {
